@@ -4,58 +4,81 @@
     <title>Gestillte Sehnsucht</title>
  </head>
  <body>
-  <ul id="piece">
-	  <li class="songTitle">
-        Title: <a href="/cyclesong/BrahmsJohannes18331897Gesaengeviolapianoaccop91GestillteSehnsucht" rel="cyclesong">Gestillte Sehnsucht</a>
-      </li>
-	  <li class="idNumber">
-        <a>Op. 91, No. 2</a>
-      </li>
-	  <li class="cycleTitle">
-	    From: <a href="/cycle/BrahmsJohannes18331897Gesaengeviolapianoaccop91" rel="cycle">Zwei Ges&auml;nge</a>
-	  </li>
-	  <li class="composerName">
-        Composer: <a href="/composer/BrahmsJohannes18331897" rel="composer">Brahms, Johannes</a>
-      </li>
-	  <li class="composerNationality">
-        Composer's Nationality: <a href="/composerNationality/german" rel="composerNationality">German</a>
-      </li>
-	  <li class="poetName">
-        Poet: <a href="/poet/RueckertFriedrich17881866" rel="poetName">R&uuml;ckert, Friedrich</a>
-      </li>
-	  <li class="poetNationality">
-        Poet's Nationality: <a href="/poetNationality/german" rel="poetNationality">German</a>
-      </li>
-	  <li class="key">
-        Key: <a href="/key/keyMed/dmaj" rel="medKey">D major</a>
-      </li>
-	  <li class="range">
-        Range: <a href="/range/rangeMed/57.76" rel="medRange">57-76</a>
-      </li>
-	  <li class="instrumentation">
-        Instrumentation: <a href="/vlavp" rel="instrumentation">Viola, voice, and piano</a>
-      </li>
-	  <li class="language">
-        Language: <a href="/language/de" rel="language">German</a>
-      </li>
-	  <li class="genre">
-        Genre: <a href="/genre/as" rel="genre">Art Song</a>
-      </li>
-	  <li class="subGenre">
-        Subgenre: <a href="/genre/as/lied" rel="subGenre">Lieder</a>
-      </li>
-	  <li class="subject">
-        Associated Subject: <a href="/subject/lullaby" rel="subject">Lullaby</a>
-      </li>
-	  <li class="tempoMarking">
-        Tempo: <a href="/tempoMarking/60bpm" rel="tempoMarking">Adagio espressivo</a>
-      </li>
-	  <li class="difficulty">
-        Difficulty: <a href="/difficulty/med" rel="difficulty">Medium</a>
-      </li>
-	  <li class="inclusion">
-		Part of a Cycle: <a href="/inclusion/y" rel="inclusion">Yes</a>
-	  </li>
+  <div id="piece">
+		<h1>Gestillte Sehnsucht</h1>
+  </div>
+  <ul id="pieceAttributes">
+	  <li class="idNumber"><span>Op. 91, No. 2</span></li>
+	  <li class="cycle">From: <a href="/cycle/BrahmsJohannes18331897Gesaengeviolapianoaccop91" rel="cycle">Zwei Ges&auml;nge</a></li>
+	  <li class="composerName">Composer: <span>Brahms, Johannes</span></li>
+	  <li class="composerNationality">Composer's Nationality: <span>German</span></li>
+	  <li class="poetName">Poet: <span>R&uuml;ckert, Friedrich</span></li>
+	  <li class="poetNationality">Poet's Nationality: <span>German</span></li>
+	  <li class="instrumentation">Instrumentation: <span>Viola, voice, and piano</span></li>
+	  <li class="language">Language: <span>German</span></li>
+	  <li class="genre">Genre: <span>Art Song</span></li>
+	  <li class="subGenre">Subgenre: <span>Lieder</span></li>
+	  <li class="subject">Associated Subject(s): <span>Lullaby</span></li>
+	  <li class="tempoMarking">Tempo: <span>Adagio espressivo</span></li>
+	  <li class="difficulty">Difficulty: <span>Medium</span></li>
+	  <li class="inclusion">Part of a Cycle: <span>Yes</span></li>
 	</ul>
+	<ol class="pieceTranspositions">
+        <li class="pieceTranspositions">
+		    High Key = <span class="key"></span>, 
+			High Range = <span class="range"></span>
+		</li>
+		<li class="pieceTranspositions">
+			Medium Key = <span class="key">D major</span>,
+			Medium Range = <span class="range">57-76</span>
+		<li class="pieceTranspositions">
+			Low Key = <span class="key"></span>,
+			Low Range = <span class="range"></span>
+        </li>
+	</ol>
+	<b>Find a Piece:</b><form method="GET" action="/piece">
+		Piece title: <input name="piece" type="text" />
+		Cycle title: <input name="cycle" type="text" /> <br />
+		Composer: <input name="composerName" type="text" />
+		Composer's Nationality: <input name="composerNationality" type="text" /> <br />
+		Poet: <input name="poetName" type="text" />
+		Poet's Nationality: <input name="poetNationality" type="text" /> <br />
+		Key: <input class="key" type="text" /> <br />
+		Range: <input class="range" type="text" /> <br />
+		Instrumentation: <input name="instrumentation" type="text" /> <br />
+		Text Source: <input class="textSource" type="text" /> <br />
+		Language: <input name="language" type="text" /> <br />
+		Genre: <input name="genre" type="text" />
+		Sub-genre: <input name="subgenre" type="text" /> <br />
+		Character associated with the piece: <input name="character" type="text" />
+		Subject associated with the piece: <input name="subject" type="text" />
+		Mood associated with the piece: <input name="mood" type="text" /> <br />
+		Tempo (in BPM): <input name="tempoMarking" type="text" /> <br />
+		Difficulty: (easy, medium, difficult) <input name="difficulty" type="text" /> <br />
+		Is it part of a cycle? (yes or no) <input name="inclusion" type="text" /> <br />
+		<input type="submit" />
+	</form>
+	<b>Add a new Piece:</b><form method="POST" action="/piece">
+		Piece title: <input name="piece" type="text" />
+		Cycle title: <input name="cycle" type="text" /> <br />
+		Composer: <input name="composerName" type="text" />
+		Composer's Nationality: <input name="composerNationality" type="text" /> <br />
+		Poet: <input name="poetName" type="text" />
+		Poet's Nationality: <input name="poetNationality" type="text" /> <br />
+		Key: <input class="key" type="text" /> <br />
+		Range: <input class="range" type="text" /> <br />
+		Instrumentation: <input name="instrumentation" type="text" /> <br />
+		Text Source: <input class="textSource" type="text" /> <br />
+		Language: <input name="language" type="text" /> <br />
+		Genre: <input name="genre" type="text" />
+		Sub-genre: <input name="subgenre" type="text" /> <br />
+		Character associated with the piece: <input name="character" type="text" />
+		Subject associated with the piece: <input name="subject" type="text" />
+		Mood associated with the piece: <input name="mood" type="text" /> <br />
+		Tempo (in BPM): <input name="tempoMarking" type="text" /> <br />
+		Difficulty: (easy, medium, difficult) <input name="difficulty" type="text" /> <br />
+		Is it part of a cycle? (yes or no) <input name="inclusion" type="text" /> <br />
+		<input type="submit" />
+	</form>
  </body>
 </html>
