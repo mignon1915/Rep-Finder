@@ -4,11 +4,13 @@ ATTRIBUTE VALUES:
 
 id attribute values:
 	id="cycle"
+	id="cycleAttributes"
+	id="cycleSongs"
 	id="piece"
+	id="pieceAttributes"
+	id="pieceTranspositions"
 
 class attribute values:
-	class="songTitle"
-	class="cycleTitle"
 	class="idNumber"
 	class="composerName"
 	class="composerNationality"
@@ -27,44 +29,14 @@ class attribute values:
 	class="tempoMarking" (notated as beats-per-measure)
 	class="difficulty"
 	class="inclusion"
-
-rel attribute values: 
-	rel="title"
-	rel="cycle"
-	rel="cycleSong"
-	rel="idNumber"
-	rel="composerName"
-	rel="composerNationality"
-	rel="poet"
-	rel="poetNationality"
-	rel="highKeyKey"
-	rel="highKeyRange"
-	rel="mediumKeyKey"
-	rel="mediumKeyRange"
-	rel="lowKeyKey"
-	rel="lowKeyRange"
-	rel="instrumentation"
-	rel="textSource"
-	rel="language"
-	rel="genre"
-	rel="subGenre"
-	rel="character"
-	rel="subject"
-	rel="mood"
-	rel="tempoMarking"
-	rel="difficulty"
-	rel="inclusion"
-	
 	
 All www.repfinder.com resources:
-	list of all songs
-	list of songs with a given characteristic
-	a single song
-	list of all song cycles
-	list of all song cycles with a given characteristic
+	list of all pieces
+	list of pieces with a given characteristic
+	a single piece
+	list of all cycles
+	list of all cycles with a given characteristic
 	a single song cycle
-	list of songs NOT part of a song cycle 
-	list of songs that are part of any song cycle
 
 	
 NOTATION:
@@ -80,20 +52,23 @@ LCSH subject heading conversion to URI:
 		"Brahms, Johannes, 1833-1897. Gesänge, viola, piano acc., op. 91" becomes /BrahmsJohannes18831897Gesaengeviolapianoaccomp91/
 
 The URIs for "range" will be notated in MIDI format (pitches are assigned numbers rather than letter names)
+	example: C#'-C''' becomes 61-84
+		
 
 The URIs for "tempo marking" will be notated in beats-per-measure (BPM)
+	example: "Andante con moto" becomes 90 BPM
 
 
-QUESTIONS:
+QUESTIONS/COMMMENTS:
 
-Currently, almost all of the list items within a resource are links (because I want these classes to be searchable).
-Not only do I not like how this looks when rendered in a browser, I find it unnecessary. 
-How can I designate an item as searchable without giving it an href?
+It is possible to create new pieces or cycles. 
+How do I specify which cycle a piece belongs to (assuming it does belong to a cycle) within the POST form?
 
-The search forms I created act as a sort of advanced search. 
-Should I create a new resource for advanced search, or should I streamline these all to a free text search? 
-How would that work? 
-Would it be as functional?
 
-I don't understand how GET, PUT, POST, and DELETE function within the context of this assignment. 
-Since I have two root resources (allSongs.html and allCycles.html), how will I be able to specify whether a new POST will be a song or a cycle?
+Several of the form attributes would be better suited for a non-"text" type. 
+I ran out of time to reserach how this would be implemented, but I plan to change this aspect of the forms.
+
+
+Within the piece and cycle resources, attributes of those pieces/cycles are designated as "class" attributes (exp. <li class="composerName">Composer: <span>Barber, Samuel</span></li>). 
+However, within the forms, these same attributes are designated as "name" attributes (exp. <input name="composerName" type="text" />). 
+Will this prevent the forms from functioning properly? 
