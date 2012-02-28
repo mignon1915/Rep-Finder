@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-	<title>Search Results: Cycles for Viola, voice, and piano</title>
+	<title>Search Results: Cycles for Viola, voice, and piano in German</title>
   </head>
   <body>
-    <form>
-		Song title: <input type="text" class="songTitle" />
-		<br />
-		Cycle title: <input type="text" name="cycleTitle" />
-		<br />
-		Composer: <input type="text" class="composerName" />
-		<br />
-		Composer Nationality: <input type="text" class="composerNattionality" />
-		<br />
-		Poet: <input type="text" class="poetName" />
-		<br />
-		Poet nationality: <input type="text" class="poetNationality" />
-		<br />
-		Key: <input type="text" class="key" />
-		<br />
-		Range (in MIDI notation): <input type="text" class="range" />
-		<br />
-		Instrumentation: <input type="text" class="instrumentation" />
-		<br />
-		Text source: <input type="text" class="textSource" />
-		<br />
-		Language: <input type="text" class="language" />
-		<br />
-		Genre: <input type="text" class="genre" />
-		<br />
-		Sub-genre: <input type="text" class="subGenre" />
-		<br />
-		Character associated with the piece: <input type="text" class="character" />
-		<br />
-		Subject associated with the piece: <input type="text" class="subject" />
-		<br />
-		Mood associated with the piece: <input type="text" class="mood" />
-		<br />
-		Tempo (in BPM): <input type="text" class="tempoMarking" />
-		<br />
-		Difficulty (easy, medium, difficult): <input type="text" class="difficulty" />
-		<br />
-	</form>
-	<p>Items matching <ul id="cycle">cycle</ul> and <li class="instrumentation">Viola, voice, and piano</li></p>
+	<div>
+		<h1>Search Results</h1>
+	</div>
+	<div>Cycles matching <br /> 
+		Language: <div class="language">German</div>
+		Instrumentation: <div class="instrumentation">Viola, voice, and piano</div>
+	</div>
 	<ul>
 	  <li class="title">
         <a href="/cycle/BrahmsJohannes18331897Gesaengeviolapianoaccop91" rel="cycle">Zwei Ges&auml;nge</a>
       </li>
 	</ul>
+	<b>Find a Cycle:</b><form method="GET" action="/cycle">
+		Cycle title: <input name="cycle" type="text" /> <br />
+		Composer: <input name="composerName" type="text" />
+		Composer's Nationality: <input name="composerNationality" type="text" /> <br />
+		Instrumentation: <input name="instrumentation" type="text" /> <br />
+		Language: <input name="language" type="text" /> <br />
+		Genre: <input name="genre" type="text" />
+		Sub-genre: <input name="subgenre" type="text" /> <br />
+		Difficulty: (easy, medium, difficult) <input name="difficulty" type="text" /> <br />
+		<input type="submit" />
+	</form>
+	<b>Add new Cycle:</b><form method="POST" action="/cycle/{uniformTitle}">
+		Cycle title: <input name="cycle" type="text" /> <br />
+		Composer: <input name="composerName" type="text" />
+		Composer's Nationality: <input name="composerNationality" type="text" /> <br />
+		Instrumentation: <input name="instrumentation" type="text" /> <br />
+		Language: <input name="language" type="text" /> <br />
+		Genre: <input name="genre" type="text" />
+		Sub-genre: <input name="subgenre" type="text" /> <br />
+		Difficulty: (easy, medium, difficult) <input name="difficulty" type="text" /> <br />
+		<input type="submit" />
+	</form>
   </body>
 </html>
+	
