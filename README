@@ -77,4 +77,4 @@ LCSH subject heading conversion to URI:
 	examples:
 		"Joyce, James, 1882-1941" becomes /JoyceJames18821941
 		"Barber, Samuel, 1910-1981. Nuvoletta" becomes /BarberSamuel19101981Nuvoletta
-		"Brahms, Johannes, 1833-1897. Gesänge, viola, piano acc., op. 91" becomes /BrahmsJohannes18831897Gesaengeviolapianoaccomp91
+		"Brahms, Johannes, 1833-1897. Gesï¿½nge, viola, piano acc., op. 91" becomes /BrahmsJohannes18831897Gesaengeviolapianoaccomp91
